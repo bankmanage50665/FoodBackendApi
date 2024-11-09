@@ -22,8 +22,8 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://foodfrontend-503fc.web.app", // Add both production and local URLs
-    // origin: "http://localhost:3001", // Add both production and local URLs
+    // origin: "https://foodfrontend-503fc.web.app", // Add both production and local URLs
+    origin: "http://localhost:3001", // Add both production and local URLs
     credentials: true,
   })
 );

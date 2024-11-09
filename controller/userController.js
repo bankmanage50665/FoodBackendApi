@@ -68,8 +68,9 @@ async function sendOTP(req, res, next) {
       specialChars: false,
     });
 
-    console.log(phoneNumber);
+    
 
+    console.log(otp)
     const user = await User.findOneAndUpdate(
       { phoneNumber },
 
@@ -79,6 +80,8 @@ async function sendOTP(req, res, next) {
       },
       { new: true, upsert: true } // Create a new user if not found
     );
+
+    console.log(user)
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
